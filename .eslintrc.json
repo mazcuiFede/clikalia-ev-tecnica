@@ -16,7 +16,13 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "testing-library"],
+  "overrides": [
+    {
+      "files": ["**/__test__/**/*.[jts]?(x)", "**/?(*.)+(spec|test).[jts]?(x)"],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
   "rules": {
     "prettier/prettier": ["error"],
     "react/react-in-jsx-scope": "off",
