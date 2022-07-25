@@ -8,10 +8,9 @@ describe('Home', () => {
   it('renders a heading', () => {
     render(<Home />);
 
-    const heading = screen.getByRole('heading', {
-      name: '',
-    });
+    const heading = screen.getByTestId('title');
 
     expect(heading).toBeInTheDocument();
+    expect(heading).toHaveTextContent('Bienvenido a Clikalia Pokemon');
   });
 });

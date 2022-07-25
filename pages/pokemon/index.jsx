@@ -5,7 +5,7 @@ import { TextField, Container } from '@mui/material';
 import CustomPaginationActionsTable from '../../components/CustomPaginationActionsTable';
 import { getPokemons } from '../../services/pokemon.services';
 
-export default function Home({ pokemons }) {
+export default function Pokemon({ pokemons }) {
   const [pokemonsFiltered, setPokemonsFiltered] = React.useState(pokemons);
 
   const filterPokemons = (e) => {

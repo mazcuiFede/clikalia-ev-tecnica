@@ -87,8 +87,6 @@ TablePaginationActions.propTypes = {
   rowsPerPage: PropTypes.number.isRequired,
 };
 
-//.sort((a, b) => (a.calories < b.calories ? -1 : 1));
-
 export default function CustomPaginationActionsTable({ pokemons }) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -127,7 +125,11 @@ export default function CustomPaginationActionsTable({ pokemons }) {
             : rows
           ).map((row) => (
             <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
+              <TableCell
+                component="th"
+                scope="row"
+                data-textid={`row-${row.name}`}
+              >
                 {row.name.charAt(0).toUpperCase() +
                   row.name.slice(1).replace('-', ' ')}
               </TableCell>

@@ -18,7 +18,7 @@ export default function Home() {
             height="150"
             width="400"
           />
-          <h1>Bienvenido a Clikalia Pokemon</h1>
+          <h1 data-testid="title">Bienvenido a Clikalia Pokemon</h1>
           <Link href="./pokemon">
             <a className="link">
               <Button variant="contained" size="large">
