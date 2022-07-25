@@ -3,6 +3,8 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
 import theme from './theme';
 import createEmotionCache from './createEmotionCache';
+import AppHeader from '../components/AppHeader';
+import AppFooter from '../components/AppFooter';
 
 export default class MyDocument extends Document {
   render() {
@@ -20,8 +22,10 @@ export default class MyDocument extends Document {
           {this.props.emotionStyleTags}
         </Head>
         <body>
+          <AppHeader />
           <Main />
           <NextScript />
+          <AppFooter />
         </body>
       </Html>
     );

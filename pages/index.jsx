@@ -1,31 +1,33 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import CustomPaginationActionsTable from '../components/CustomPaginationActionsTable';
+import Link from 'next/link';
+import { Button, Container } from '@mui/material';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/static/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Aquí puedes obtener información de tus Pokemons favoritos!
-        </h1>
-        <CustomPaginationActionsTable />
+      <main>
+        <Container className="home">
+          <Image
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"
+            height="150"
+            width="400"
+          />
+          <h1>Bienvenido a Clikalia Pokemon</h1>
+          <Link href="./pokemon">
+            <a className="link">
+              <Button variant="contained" size="large">
+                Ver listado de Pokemon's
+              </Button>
+            </a>
+          </Link>
+        </Container>
       </main>
     </div>
   );
 }
-
-Home.getInitialProps = async (ctx) => {
-  const res = await fetch(
-    'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'
-  );
-  const json = await res.json();
-  console.log(json.results);
-  return { stars: json.results };
-};

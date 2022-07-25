@@ -6,9 +6,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import theme from './theme';
 import createEmotionCache from './createEmotionCache';
-
-// Client-side cache shared for the whole session
-// of the user in the browser.
+import '../styles/globals.css';
+import '../styles/appBar.scss';
+import '../styles/pokemon-details.scss';
+import '../styles/pokemon.scss';
+import '../styles/home.scss';
+import '../styles/footerBar.scss';
 
 const clientSideEmotionCache = createEmotionCache();
 
