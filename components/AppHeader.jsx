@@ -14,7 +14,7 @@ export default function AppHeader() {
             Clikalia - Poke Api
           </Typography>
           <Link href="./pokemon">
-            <a className="link">Ver listado de Pokemon's</a>
+            <a className="link">Ver listado de Pokemones</a>
           </Link>
         </Toolbar>
       </AppBar>

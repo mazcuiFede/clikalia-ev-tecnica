@@ -22,7 +22,7 @@ export default function Home() {
           <Link href="./pokemon">
             <a className="link">
               <Button variant="contained" size="large">
-                Ver listado de Pokemon's
+                Ver listado de Pokemones
               </Button>
             </a>
           </Link>

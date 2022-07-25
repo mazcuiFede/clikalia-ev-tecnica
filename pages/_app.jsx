@@ -4,8 +4,8 @@ import Head from 'next/head';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
-import theme from './theme';
-import createEmotionCache from './createEmotionCache';
+import theme from '../components/theme';
+import createEmotionCache from '../components/createEmotionCache';
 import '../styles/globals.css';
 import '../styles/appBar.scss';
 import '../styles/pokemon-details.scss';
@@ -37,6 +37,6 @@ export default function MyApp(props) {
 
 MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
-  emotionCache: PropTypes.object,
-  pageProps: PropTypes.object.isRequired,
+  emotionCache: PropTypes.shape,
+  pageProps: PropTypes.shape.isRequired,
 };

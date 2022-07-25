@@ -10,6 +10,7 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "@emotion/cache": "^11.9.3",
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.9.3",
@@ -17,10 +18,13 @@
     "@mui/material": "^5.9.1",
     "next": "12.2.3",
     "node-fetch": "^3.2.9",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "testing-library": "^0.0.2"
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.16.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "eslint": "^7.32.0",
@@ -29,6 +33,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-testing-library": "^5.5.1",
     "identity-obj-proxy": "^3.0.0",
     "isomorphic-unfetch": "^3.1.0",
     "jest": "^28.1.3",

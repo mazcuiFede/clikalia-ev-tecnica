@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
@@ -24,9 +25,11 @@
     }
   ],
   "rules": {
-    "prettier/prettier": ["error"],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "warn",
+    "jsx-a11y/anchor-is-valid": 0,
+    "import/prefer-default-export": "off"
   }
 }

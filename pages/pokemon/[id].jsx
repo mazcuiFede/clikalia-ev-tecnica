@@ -5,14 +5,12 @@ import { getPokemonDetails } from '../../services/pokemon.services';
 import BasicCard from '../../components/BasicCard';
 
 export default function PokemonDetail({ pokemonDetails }) {
-  const buildDescription = (pokemonDetails) => {
-    return {
-      Tipo: pokemonDetails.types.map((x) => x.type.name + ' '),
-      Peso: pokemonDetails.weight,
-      Habilidades: pokemonDetails.abilities.map((x) => x.ability.name + ' '),
-      Movimientos: pokemonDetails.moves.map((x) => x.move.name + ' '),
-    };
-  };
+  const buildDescription = (details) => ({
+    Tipo: details.types.map((x) => `${x.type.name} `),
+    Peso: details.weight,
+    Habilidades: details.abilities.map((x) => `${x.ability.name} `),
+    Movimientos: details.moves.map((x) => `${x.move.name} `),
+  });
 
   return (
     <div className="details">
@@ -29,7 +27,7 @@ export default function PokemonDetail({ pokemonDetails }) {
                 pokemonDetails.name.slice(1).replace('-', ' ')}
             </h1>
           </Grid>
-          <Grid item xs={0} sm={4}></Grid>
+          <Grid item xs={0} sm={4} />
           <Grid item xs={12} sm={4}>
             <div>
               <BasicCard

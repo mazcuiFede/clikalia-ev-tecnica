@@ -24,13 +24,11 @@ export default function BasicCard({ image, name, description }) {
           {name.charAt(0).toUpperCase() + name.slice(1).replace('-', ' ')}
         </Typography>
 
-        {Object.entries(description).map(([key, value], i) => {
-          return (
-            <div key={i}>
-              <b>{key}</b>: {value}
-            </div>
-          );
-        })}
+        {Object.entries(description).map(([key, value]) => (
+          <div>
+            <b>{key}</b>: {value}
+          </div>
+        ))}
       </CardContent>
       <CardActions>
         <Button size="small" onClick={() => router.back()} variant="outlined">
@@ -44,5 +42,5 @@ export default function BasicCard({ image, name, description }) {
 BasicCard.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  description: PropTypes.object.isRequired,
+  description: PropTypes.shape.isRequired,
 };
