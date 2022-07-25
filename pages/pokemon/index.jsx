@@ -17,7 +17,7 @@ export default function Pokemon({ pokemons }) {
   return (
     <div>
       <Head>
-        <title>Clikalia Pokemon App</title>
+        <title>Matias Pokemon App</title>
         <link rel="shortcut icon" href="/static/favicon.ico" />
       </Head>
 

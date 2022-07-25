@@ -11,6 +11,6 @@ describe('Home', () => {
     const heading = screen.getByTestId('title');
 
     expect(heading).toBeInTheDocument();
-    expect(heading).toHaveTextContent('Bienvenido a Clikalia Pokemon');
+    expect(heading).toHaveTextContent('Bienvenido a Matias Pokemon');
   });
 });

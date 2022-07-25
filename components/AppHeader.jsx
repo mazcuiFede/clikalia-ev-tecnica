@@ -11,7 +11,7 @@ export default function AppHeader() {
       <AppBar position="static" className="appBar">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Clikalia - Poke Api
+            Matias - Poke Api
           </Typography>
           <Link href="./pokemon">
             <a className="link">Ver listado de Pokemones</a>
