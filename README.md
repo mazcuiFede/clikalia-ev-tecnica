@@ -1,12 +1,34 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Descripción
+
+La aplicación fue desarrollada según los requerimientos presentes en el email enviado por Ines Rodriguez, la misma cumple con todo a excepción de algunos puntos de funcionalidad de la pantalla de "detalle pokemon". 
+
+## Link aplicación
+
+La aplicación fue deployada con CI/CD utilizando vercel y con StaticSiteRendering (ya que suponemos que la lista de pokemon's será estática)
+
+[Link a la aplicación](https://clikalia-ev-tecnica.vercel.app/)
+
+## Futuras consideraciones
+
+Queda pendiente mejorar los test y realizar otros. La librería utilizada fue Jest junto con @testing-library/react. 
+Adicionalmente, existen algunas funcionalidades que no fueron desarrolladas en la pantalla "detalle pokemon" por falta de tiempo.
+
+## Librerías implementadas
+
+Material UI (MUI): para la creación de comoponentes.
+Sass: para estilos (aunque solo se utilizaron funcionalidades básicas)
+Jest y Testing Library: testing (solo se hicieron configuraciones básicas)
+Prop-types: para el control de tipos enviados a componentes (otra opción sería utilizar TS)
+Eslint y prettier: Estandarización de código, se configuró "format on save" y para controlar el código previo a hacer el build.
+
+
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
